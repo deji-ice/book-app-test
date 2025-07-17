@@ -1,0 +1,266 @@
+[
+  {
+    "id": "1",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A novel about the serious issues of rape and racial inequality, seen through the eyes of young Scout Finch in the Deep South. The story explores themes of justice, morality, and compassion as Atticus Finch defends a black man falsely accused of a terrible crime.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+    "publishedDate": 1960,
+    "genre": "Fiction",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "1",
+        "rating": 5,
+        "comment": "A timeless classic that everyone should read."
+      },
+      {
+        "id": "c2",
+        "userId": "2",
+        "comment": "Loved the characters and the message."
+      },
+      {
+        "id": "3ec94c25-8e80-4487-a783-0c9b62ce1264",
+        "userId": "1c9f613b-dcf6-4839-b021-6f5783cb312b",
+        "comment": "test",
+        "rating": 2
+      },
+      {
+        "id": "1b7114e6-b12b-489b-98bb-81128ffde467",
+        "userId": "913d285b-0c1f-486d-92e7-5bd40ac01cf7",
+        "comment": "yoo",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel set in a totalitarian society ruled by Big Brother. Winston Smith struggles with oppression in Oceania, a place where the Party scrutinizes human actions with ever-watchful eyes. A profound warning about the dangers of totalitarianism and extreme political ideology.",
+    "coverImage": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    "publishedDate": 1949,
+    "genre": "Dystopian",
+    "comments": [
+      {
+        "id": "c3",
+        "userId": "3",
+        "rating": 4,
+        "comment": "Chilling and thought-provoking."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic novel that also critiques the British landed gentry at the end of the 18th century. Elizabeth Bennet navigates issues of manners, upbringing, morality, and marriage in the society of the landed gentry of the British Regency.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+    "publishedDate": 1813,
+    "genre": "Romance",
+    "comments": []
+  },
+  {
+    "id": "4",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A novel about the American dream and the roaring twenties. Jay Gatsby, a mysterious millionaire, throws lavish parties in hopes of rekindling his love for Daisy Buchanan. The story explores themes of decadence, idealism, resistance to change, and excess.",
+    "coverImage": "https://covers.openlibrary.org/b/id/7352162-L.jpg",
+    "publishedDate": 1925,
+    "genre": "Classic",
+    "comments": [
+      {
+        "id": "c4",
+        "userId": "4",
+        "comment": "A beautifully written critique of the American dream."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "A fantasy novel and prelude to The Lord of the Rings. Bilbo Baggins, a hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Along the way, he discovers courage and friendship.",
+    "coverImage": "https://covers.openlibrary.org/b/id/6979861-L.jpg",
+    "publishedDate": 1937,
+    "genre": "Fantasy",
+    "comments": []
+  },
+  {
+    "id": "6",
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "description": "The narrative of Captain Ahab’s obsessive quest to kill the white whale, Moby Dick. The novel explores complex themes such as fate, revenge, and humanity’s relationship with nature.",
+    "coverImage": "https://covers.openlibrary.org/b/id/5551231-L.jpg",
+    "publishedDate": 1851,
+    "genre": "Adventure",
+    "comments": [
+      {
+        "id": "c5",
+        "userId": "5",
+        "rating": 3,
+        "comment": "A bit long, but worth the read for its depth."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "description": "A historical novel that chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society. The novel intertwines the lives of several families as they navigate love, loss, and war.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231856-L.jpg",
+    "publishedDate": 1869,
+    "genre": "Historical",
+    "comments": []
+  },
+  {
+    "id": "8",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A story about adolescent alienation and loss of innocence. Holden Caulfield recounts his days in New York City after being expelled from prep school, exploring themes of identity, belonging, and rebellion.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
+    "publishedDate": 1951,
+    "genre": "Fiction",
+    "comments": []
+  },
+  {
+    "id": "9",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "description": "A dystopian novel set in a futuristic World State, where citizens are engineered for their roles and kept docile with pleasure and technology. The book explores the loss of individuality and the dangers of state control.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8775111-L.jpg",
+    "publishedDate": 1932,
+    "genre": "Dystopian",
+    "comments": []
+  },
+  {
+    "id": "10",
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "description": "A novel about the experiences of the orphan Jane Eyre, who overcomes hardship and social criticism to find love and independence. The story is a powerful exploration of class, sexuality, religion, and feminism.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8225631-L.jpg",
+    "publishedDate": 1847,
+    "genre": "Romance",
+    "comments": [
+      {
+        "id": "c6",
+        "userId": "6",
+        "comment": "Jane is such a strong and inspiring character."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "description": "A psychological novel about the moral dilemmas of a poor ex-student, Raskolnikov, who plots and commits a murder. The novel delves into themes of guilt, redemption, and the nature of evil.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231991-L.jpg",
+    "publishedDate": 1866,
+    "genre": "Classic",
+    "comments": []
+  },
+  {
+    "id": "12",
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "description": "An epic fantasy trilogy about the quest to destroy the One Ring. Frodo Baggins and his companions journey across Middle-earth, facing unimaginable dangers and forging unbreakable bonds of friendship.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231852-L.jpg",
+    "publishedDate": 1954,
+    "genre": "Fantasy",
+    "comments": [
+      {
+        "id": "c7",
+        "userId": "7",
+        "rating": 5,
+        "comment": "The best fantasy series ever written!"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical novel about a shepherd’s journey to the pyramids of Egypt. Santiago’s quest is filled with lessons about listening to your heart, recognizing opportunity, and following your dreams.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231853-L.jpg",
+    "publishedDate": 1988,
+    "genre": "Adventure",
+    "comments": []
+  },
+  {
+    "id": "14",
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "description": "A tale of passion and revenge on the Yorkshire moors. The intense relationship between Heathcliff and Catherine Earnshaw is at the heart of this dark and stormy classic.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231854-L.jpg",
+    "publishedDate": 1847,
+    "genre": "Classic",
+    "comments": []
+  },
+  {
+    "id": "15",
+    "title": "The Odyssey",
+    "author": "Homer",
+    "description": "An epic poem about Odysseus’s journey home after the Trojan War. Facing monsters, gods, and temptations, Odysseus’s adventure is a foundational work of Western literature.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231855-L.jpg",
+    "publishedDate": -800,
+    "genre": "Epic",
+    "comments": []
+  },
+  {
+    "id": "16",
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "description": "A coming-of-age novel that depicts the personal growth of an orphan named Pip. The story explores themes of wealth, poverty, love, rejection, and the eventual triumph of good over evil.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231857-L.jpg",
+    "publishedDate": 1861,
+    "genre": "Classic",
+    "comments": []
+  },
+  {
+    "id": "17",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "description": "A Spanish novel about the adventures of a nobleman who reads too many chivalric romances. Don Quixote and his loyal squire, Sancho Panza, set out to revive chivalry and right the world’s wrongs, often with comic results.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231858-L.jpg",
+    "publishedDate": 1605,
+    "genre": "Adventure",
+    "comments": []
+  },
+  {
+    "id": "18",
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "description": "A tragic story of love and infidelity in imperial Russia. Anna’s passionate affair with Count Vronsky leads to her downfall in a society that is unforgiving of transgressions.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231859-L.jpg",
+    "publishedDate": 1877,
+    "genre": "Romance",
+    "comments": []
+  },
+  {
+    "id": "19",
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "description": "A novel about a scientist who creates a sentient creature in an unorthodox experiment. Frankenstein’s monster, rejected by society, seeks acceptance and revenge, raising questions about the nature of humanity.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231860-L.jpg",
+    "publishedDate": 1818,
+    "genre": "Horror",
+    "comments": [
+      {
+        "id": "c8",
+        "userId": "8",
+        "rating": 4,
+        "comment": "Haunting and surprisingly moving."
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "description": "A philosophical novel set in 19th-century Russia, exploring faith, doubt, and reason. The story follows the lives of the Karamazov brothers as they grapple with questions of morality, free will, and the existence of God.",
+    "coverImage": "https://covers.openlibrary.org/b/id/8231861-L.jpg",
+    "publishedDate": 1880,
+    "genre": "Classic",
+    "comments": []
+  }
+]
