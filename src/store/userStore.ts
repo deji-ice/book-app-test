@@ -1,13 +1,27 @@
 import { User } from '@/types';
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 interface UserStoreState {
-    user: User | null;
-    setUser: (user: User) => void;
+  currentUser: User | null;
+  setUser: (user: User | null) => void;
+  hasHydrated: boolean;
+  setHasHydrated: () => void;
 }
 
-export const useUserStore = create<UserStoreState>((set) => ({
-    user: null,
-    setUser: (user) => set({ user }),
-    
-}));
+const store = persist<UserStoreState>(
+  (set) => ({
+    currentUser: null,
+    setUser: (user) => set({ currentUser: user }),
+    hasHydrated: false,
+    setHasHydrated: () => set({ hasHydrated: true }),
+  }),
+  {
+    name: 'user-storage',
+    onRehydrateStorage: () => (state) => {
+      state?.setHasHydrated();
+    },
+  }
+);
+
+export const useUserStore = create(store);

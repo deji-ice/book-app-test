@@ -3,8 +3,8 @@ interface User {
     userName: string;
     email: string;
     password: string;
-    followers: number[];
-    following: number[];
+    followers: string[];
+    following: string[];
 }
 
 interface Book {
@@ -23,6 +23,6 @@ interface Comment {
     userId: string;
     rating?: number;
     comment: string;
-}   
+}
 
 export type { User, Book, Comment };
