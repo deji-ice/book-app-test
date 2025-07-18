@@ -57,7 +57,7 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full flex-1 bg-white p-10 rounded-2xl space-y-7 border border-teal-100"
+      className="w-full flex-1 max-w-3xl bg-white p-10 rounded-2xl space-y-7 border border-teal-100"
     >
       <div className="flex flex-col items-center mb-2">
         <div className="w-16 h-16 mb-2">

@@ -54,7 +54,7 @@ export function RegisterForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto flex-1 bg-white p-8 rounded-lg shadow-md space-y-6 border border-teal-100"
+      className="mx-auto flex-1 max-w-3xl bg-white p-8 rounded-lg shadow-md space-y-6 border border-teal-100"
     >
       <h2 className="text-3xl font-bold text-teal-700 text-center mb-4">Create an Account</h2>
 
