@@ -1,10 +1,23 @@
+"use client";
+
+import BookList from "@/components/BookList";
+import { useUserStore } from "@/store/userStore";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const user = useUserStore((state) => state.currentUser);
+  console.log(user);
   return (
-    <div>
-      <h1 className="text-4xl font-bold">Welcome to the Book Store</h1>
-      <p className="mt-4">Discover your next great read!</p>
+    <div className="flex flex-col items-center justify-center text-gray-800">
+
+        <div className=" w-full flex flex-col justify-center px-4 py-3">
+          <h2 className="text-2xl lg:text-4xl font-semibold">
+            Available books
+          </h2>
+          <p className="mb-5">Explore our collection of books.</p>
+          <BookList />
+        </div>
     </div>
   );
 }
