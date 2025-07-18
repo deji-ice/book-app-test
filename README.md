@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Got it — here’s a corrected version you can **paste** — with `providers` under `src/` (not inside `app/`):
+
+```markdown
+# Book Store
+
+A simple full-stack Book Store built with **Next.js 15**, **React Query**, **Zustand**, **Tailwind CSS**, and **pnpm**.  
+Users can browse paginated books, view details, comment with ratings, follow other users, and manage their profiles.
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **State Management:** React Query, Zustand (`useUserStore`, `useBookStore`)
+- **Styling:** Tailwind CSS
+- **API Routes:** Next.js Route Handlers (`/app/api`)
+- **Providers:** React Query Provider, Zustand store wrapped in `src/providers`
+- **Data Source:** Local JSON file (`/src/data/books.json`)
+- **Package Manager:** pnpm
+
+---
+
+## Project Structure
+
+```
+
+src/
+├── app/
+│   ├── api/           # Route Handlers (auth, books, comments)
+│   ├── auth/          # Authentication pages (login, register)
+│   ├── books/         # Book-related pages
+│   │   ├── [id]/      # Dynamic book detail page
+│   │   │   ├── page.tsx # Book detail page
+│   ├── users/         # User-related pages
+│   │   ├── [id]/      # Dynamic user profile page
+│   │   │   ├── page.tsx # User profile page
+│   ├── layout.tsx     # Main layout with providers
+│   ├── globals.css    # Global styles
+│   ├── page.tsx       # Main pages
+├── components/        # Reusable UI components
+├── hooks/             # Custom React Query hooks
+├── store/             # Zustand stores
+├── providers/         # React Query & Zustand Providers
+├── types/             # Shared TypeScript types
+├── data/              # Local books JSON
+
+````
+
+---
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/deji-ice/book-store-test.git
+cd book-store
+````
+
+2. **Install dependencies**
+
+```bash
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Run the development server**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Register, login, logout (mock auth with Zustand)
+* View user profiles, follow/unfollow
+* Browse books with pagination
+* View detailed book pages
+* Add comments and ratings to books
+* Responsive UI with Tailwind CSS
+* State synced with React Query and Zustand
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## API Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* `GET /api/books` — Get paginated books (`?page=1&limit=10`)
+* `GET /api/books/:id` — Get a single book by ID
+* `POST /api/books/:id/comments` — Add a comment to a book
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* `POST /api/auth/register` — Register a new user
+* `POST /api/auth/login` — Login user
+
+* `GET /api/users` — Get all users
+* `GET /api/users/:id` — Get a single user by ID
+* `GET /api/users/:id/followers` — Get followers of a user
+* `POST /api/users/:id/follow` — Follow a user
+* `Delete /api/users/:id/follow` — Unfollow a user
+
+
+---
+
+## Scripts
+
+```bash
+pnpm dev     # Run development server
+pnpm build   # Build production output
+pnpm start   # Run production server
+```
+
+---
+
