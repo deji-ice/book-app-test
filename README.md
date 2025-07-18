@@ -1,4 +1,3 @@
-Got it — here’s a corrected version you can **paste** — with `providers` under `src/` (not inside `app/`):
 
 ```markdown
 # Book Store
@@ -22,7 +21,6 @@ Users can browse paginated books, view details, comment with ratings, follow oth
 
 ## Project Structure
 
-```
 
 src/
 ├── app/
@@ -44,7 +42,6 @@ src/
 ├── types/             # Shared TypeScript types
 ├── data/              # Local books JSON
 
-````
 
 ---
 
