@@ -10,14 +10,14 @@ const NavBar = () => {
   const setUser = useUserStore((state) => state.setUser);
 
   return (
-    <nav className="bg-white fixed w-full inset-x-0 top-0 border-b shadow-sm z-50">
+    <nav className="bg-teal-800 fixed w-full inset-x-0 top-0 border-b shadow-sm z-50">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-        <Link href="/" className="text-xl font-bold text-teal-700">
+        <Link href="/" className="text-xl font-bold text-white">
           Book Store
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-6 items-center">
+        <div className="hidden md:flex text-white font-semibold space-x-6 items-center">
           <Link href="/" className="hover:text-teal-600">
             Home
           </Link>
@@ -55,7 +55,7 @@ const NavBar = () => {
           <svg
             className="w-7 h-7"
             fill="none"
-            stroke="currentColor"
+            stroke="white"
             viewBox="0 0 24 24"
           >
             {open ? (
@@ -79,7 +79,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white px-4 pb-4 overflow-hidden transition-all duration-300 ${
+        className={`md:hidden bg-teal-800 text-white font-semibold px-4 pb-4 overflow-hidden transition-all duration-300 ${
           open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
