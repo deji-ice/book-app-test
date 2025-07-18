@@ -67,9 +67,21 @@
     "email": "dejixice@gmail.com",
     "password": "test",
     "userName": "ayo",
-    "followers": [],
+    "followers": [
+      "e7a3def1-db54-461d-b617-6c880c4faaa8"
+    ],
     "following": [
       "2"
+    ]
+  },
+  {
+    "id": "e7a3def1-db54-461d-b617-6c880c4faaa8",
+    "email": "ayodejiatanda1@gmail.com",
+    "password": "test",
+    "userName": "admin",
+    "followers": [],
+    "following": [
+      "913d285b-0c1f-486d-92e7-5bd40ac01cf7"
     ]
   }
 ]

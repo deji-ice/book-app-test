@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: "Book Store App",
   description: "Created by Deji",
 };
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export default function RootLayout({
   children,
@@ -18,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased  w-full mx-auto` }>
+      <body className={`antialiased ${geist.variable} ${geistMono.variable} w-full mx-auto`}>
         <QueryProvider>
           <NavBar />
           <ProtectedRoute>

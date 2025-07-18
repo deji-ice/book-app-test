@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -7,15 +8,18 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Book Store. All rights reserved.
       </span>
       <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-2 md:mt-0">
-        <a href="/" className="text-blue-600 hover:underline text-sm">
+        <Link href="/" className="text-blue-600 hover:underline text-sm">
           Home
-        </a>
-        <a href="/register" className="text-blue-600 hover:underline text-sm">
+        </Link>
+        <Link
+          href="/register"
+          className="text-blue-600 hover:underline text-sm"
+        >
           Register
-        </a>
-        <a href="/login" className="text-blue-600 hover:underline text-sm">
+        </Link>
+        <Link href="/login" className="text-blue-600 hover:underline text-sm">
           Login
-        </a>
+        </Link>
       </div>
     </footer>
   );

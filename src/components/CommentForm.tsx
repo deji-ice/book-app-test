@@ -1,6 +1,6 @@
 "use client";
 
-import { useBooks } from "@/hooks/useBooks";
+import { useAddComment } from "@/hooks/useBooks";
 import { useUserStore } from "@/store/userStore";
 import React, { useState } from "react";
 
@@ -16,7 +16,7 @@ const CommentForm: React.FC<CommentFormProps> = ({ bookId }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const user = useUserStore((state) => state?.currentUser);
-  const { addComment } = useBooks();
+  const addComment = useAddComment();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -33,22 +33,27 @@ const CommentForm: React.FC<CommentFormProps> = ({ bookId }) => {
     if (!formData.comment.trim() || !user) return;
 
     setIsSubmitting(true);
-    await addComment({
-      bookId,
-      comment: {
-        userId: user.id,
-        comment: formData.comment,
-        rating: formData.rating,
-      },
-    });
-    setIsSubmitting(false);
-    setFormData({ comment: "", rating: 0 });
+    try {
+      await addComment.mutateAsync({
+        bookId,
+        comment: {
+          userId: user.id,
+          comment: formData.comment,
+          rating: formData.rating,
+        },
+      });
+      setFormData({ comment: "", rating: 0 });
+    } catch (err) {
+      console.error("Failed to add comment:", err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-6 border border-gray-200 rounded-lg p-4  bg-gray-50"
+      className="mt-6 border border-gray-200 rounded-lg p-4 bg-gray-50"
     >
       <textarea
         name="comment"

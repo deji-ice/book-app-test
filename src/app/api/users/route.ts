@@ -2,8 +2,8 @@ import fs from "fs/promises";
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 
-
-export const GET = async (_req: NextRequest) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const GET = async (_: NextRequest) => {
     const filePath = path.join(process.cwd(), "src/data/users.json");
     const data = await fs.readFile(filePath, "utf-8");
     const users = JSON.parse(data);

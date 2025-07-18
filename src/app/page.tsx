@@ -2,8 +2,6 @@
 
 import BookList from "@/components/BookList";
 import { useUserStore } from "@/store/userStore";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   const user = useUserStore((state) => state.currentUser);

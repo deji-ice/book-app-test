@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useUserStore } from "@/store/userStore";
-import { useUsers } from "@/hooks/useUsers";
+import { useFollowUser, useUnfollowUser } from "@/hooks/useUsers";
 
 interface FollowButtonProps {
   userId: string; // The profile being viewed
@@ -10,7 +10,8 @@ interface FollowButtonProps {
 
 const FollowButton: React.FC<FollowButtonProps> = ({ userId }) => {
   const currentUser = useUserStore((state) => state.currentUser);
-  const { followUser, unfollowUser } = useUsers(); 
+  const followUserMutation = useFollowUser();
+  const unfollowUserMutation = useUnfollowUser();
 
   if (!currentUser) return null;
 
@@ -18,15 +19,15 @@ const FollowButton: React.FC<FollowButtonProps> = ({ userId }) => {
   const isFollowing = currentUser.following.includes(userId);
 
   const handleFollow = () => {
-    followUser({
-      userId, // The profile you want to follow
+    followUserMutation.mutate({
+      userId,
       followerId: currentUser.id,
     });
   };
 
   const handleUnfollow = () => {
-    unfollowUser({
-      userId, // The profile you want to unfollow
+    unfollowUserMutation.mutate({
+      userId,
       followerId: currentUser.id,
     });
   };

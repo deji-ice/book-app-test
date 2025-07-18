@@ -2,13 +2,12 @@
 
 import React, { useState } from "react";
 import BookCard from "./BookCard";
-import { useBooks } from "@/hooks/useBooks";
 import SearchBar from "./SearchBar";
 import GenreFilter from "./GenreFilter";
+import { useGetAllBooks } from "@/hooks/useBooks";
 
 const BookList = () => {
-  const { getAllBooks } = useBooks();
-  const { data, isLoading, isError } = getAllBooks(1, 9999); // fetch ALL
+  const { data, isLoading, isError } = useGetAllBooks(1, 9999);
   const [searchTerm, setSearchTerm] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
   const [page, setPage] = useState(1);
@@ -21,15 +20,11 @@ const BookList = () => {
       book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       book.author.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesGenre =
-      !genreFilter ||
-      book.genre.toLowerCase() === genreFilter.toLowerCase();
+      !genreFilter || book.genre.toLowerCase() === genreFilter.toLowerCase();
     return matchesSearch && matchesGenre;
   });
 
-  const paginatedBooks = filteredBooks.slice(
-    (page - 1) * limit,
-    page * limit
-  );
+  const paginatedBooks = filteredBooks.slice((page - 1) * limit, page * limit);
 
   const totalPages = Math.ceil(filteredBooks.length / limit);
 

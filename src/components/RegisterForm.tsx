@@ -35,8 +35,12 @@ export function RegisterForm() {
       setUser(result.data);
       router.push("/"); // Redirect to home
     },
-    onError: (err: any) => {
-      setError(err.message || "Registration failed");
+    onError: (err: unknown) => {
+      if (err instanceof Error) {
+        setError(err.message || "Registration failed");
+      } else {
+        setError("Registration failed");
+      }
     },
   });
 

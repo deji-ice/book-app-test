@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useUserStore } from "@/store/userStore";
 import { useRouter } from "next/navigation";
 import { useMutation } from "@tanstack/react-query";
+import Image from "next/image";
 
 type FormData = {
   email: string;
@@ -38,8 +39,12 @@ const LoginForm = () => {
         router.push("/");
       }
     },
-    onError: (error: any) => {
-      setError(error.message || "Login failed");
+    onError: (error: unknown) => {
+      if (error instanceof Error) {
+        setError(error.message || "Login failed");
+      } else {
+        setError("Login failed");
+      }
     },
   });
 
@@ -61,9 +66,12 @@ const LoginForm = () => {
     >
       <div className="flex flex-col items-center mb-2">
         <div className="w-16 h-16 mb-2">
-          <img
+          <Image
             src="/vercel.svg"
             alt="Logo"
+            width={64}
+            height={64}
+            priority
             className="w-full h-full object-contain"
           />
         </div>

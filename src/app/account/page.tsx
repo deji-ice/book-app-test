@@ -2,20 +2,22 @@
 
 import React from "react";
 import UserProfile from "@/components/UserProfile";
-import { useUsers } from "@/hooks/useUsers";
 import { useUserStore } from "@/store/userStore";
+import { useSingleUser, useAllUsers } from "@/hooks/useUsers";
 
 export default function AccountPage() {
   const currentUser = useUserStore((state) => state?.currentUser);
-  const { getSingleUser, getAllUsers } = useUsers();
 
   const {
     data: user,
     isLoading: userLoading,
     error: userError,
-  } = getSingleUser(currentUser?.id ?? "");
+  } = useSingleUser(currentUser?.id ?? "");
 
-  const { data: allUsers, isLoading: usersLoading } = getAllUsers;
+  const {
+    data: allUsers,
+    isLoading: usersLoading,
+  } = useAllUsers();
 
   if (userLoading || usersLoading) {
     return <div className="text-center mt-10">Loading...</div>;
@@ -25,13 +27,11 @@ export default function AccountPage() {
     return <div className="text-center mt-10">Failed to load account.</div>;
   }
 
-  const followers =
-    allUsers?.filter((u) => user.followers.includes(u.id)) ?? [];
-  const following =
-    allUsers?.filter((u) => user.following.includes(u.id)) ?? [];
+  const followers = allUsers?.filter((u) => user.followers.includes(u.id)) ?? [];
+  const following = allUsers?.filter((u) => user.following.includes(u.id)) ?? [];
 
   return (
-    <main className=" mx-auto p-6">
+    <main className="mx-auto p-6">
       <UserProfile
         user={user}
         followers={followers}

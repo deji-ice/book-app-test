@@ -2,8 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { useUsers } from "@/hooks/useUsers";
-import { useBooks } from "@/hooks/useBooks";
+import { useGetSingleBook } from "@/hooks/useBooks";
+import { useAllUsers } from "@/hooks/useUsers";
 
 type CommentListProps = {
   bookId: string;
@@ -14,12 +14,12 @@ const CommentList = ({ bookId }: CommentListProps) => {
     data: book,
     isLoading: bookLoading,
     error: bookError,
-  } = useBooks().getSingleBook(bookId);
+  } = useGetSingleBook(bookId);
   const {
     data: users,
     isLoading: usersLoading,
     error: usersError,
-  } = useUsers().getAllUsers;
+  } = useAllUsers();
 
   if (bookLoading || usersLoading) return <p>Loading comments...</p>;
   if (bookError || usersError || !book) return <p>Failed to load comments.</p>;

@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import { Comment } from "@/types";
+import { Book, Comment } from "@/types";
 import { NextRequest, NextResponse } from "next/server";
 
 type Params = {
@@ -32,7 +32,7 @@ export const POST = async (req: NextRequest, { params }: Params) => {
     };
 
     // Find the book & add comment
-    const book = books.find((b: any) => b.id === id);
+    const book = books.find((b: Book) => b.id === id);
     if (!book) {
         return NextResponse.json({ error: "Book not found" }, { status: 404 });
     }

@@ -2,16 +2,12 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import BookDetail from "@/components/BookDetail";
-import { useBooks } from "@/hooks/useBooks";
+import { useGetSingleBook } from "@/hooks/useBooks";
 
 export default function BookDetailPage() {
   const { id } = useParams(); //destructure the id from the params
   console.log(id);
-  const {
-    data: book,
-    error,
-    isLoading,
-  } = useBooks().getSingleBook(id as string); // use the getSingleBook function from useBooks hook
+  const { data: book, error, isLoading } = useGetSingleBook(id as string); // Use the hook to fetch book details by ID
   console.log("book", book);
 
   if (isLoading)
