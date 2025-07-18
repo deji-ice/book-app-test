@@ -24,11 +24,11 @@ export default function ProtectedRoute({
   }, [user, pathname, router, hasHydrated]);
 
   if (!hasHydrated) {
-    return <div>Loading...</div>;
+    return <div className="min-h-[calc(100vh-12rem)]">Loading...</div>;
   }
 
   if (!user?.id && !publicRoutes.includes(pathname)) {
-    return <div>Not authorized. Redirecting to login...</div>;
+    return <div className="min-h-[calc(100vh-12rem)]">Not authorized. Redirecting to login...</div>;
   }
 
   return <>{children}</>;

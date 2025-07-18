@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t mt-10 py-6 h-full min-h-[5rem]  max-h-[10rem] lg:min-h-[7rem] flex flex-col md:flex-row items-center justify-between  px-4 lg:px-10">
+    <footer className="w-full bg-white border-t mt-10 py-6 h-full min-h-[5rem]  max-h-[8rem] lg:min-h-[7rem] flex flex-col md:flex-row items-center justify-between  px-4 lg:px-10">
       <span className="text-gray-500 text-sm text-center md:text-left">
         &copy; {new Date().getFullYear()} Book Store. All rights reserved.
       </span>

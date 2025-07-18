@@ -20,16 +20,19 @@ const NavBar = () => {
             <Link href="/" className="hover:text-teal-600">
               Home
             </Link>
-            <Link href="/account" className="hover:text-teal-600">
-              Account
-            </Link>
+
             {currentUser?.id ? (
-              <button
-                onClick={() => setUser(null)}
-                className="hover:text-teal-600 bg-transparent border-none cursor-pointer"
-              >
-                Logout
-              </button>
+              <>
+                <Link href="/account" className="hover:text-teal-600">
+                  Account
+                </Link>
+                <button
+                  onClick={() => setUser(null)}
+                  className="hover:text-teal-600 bg-transparent border-none cursor-pointer"
+                >
+                  Logout
+                </button>
+              </>
             ) : (
               <>
                 <Link href="/register" className="hover:text-teal-600">
@@ -78,16 +81,19 @@ const NavBar = () => {
           <Link href="/" className="block hover:text-teal-600">
             Home
           </Link>
-          <Link href="/account" className="hover:text-teal-600">
-            Account
-          </Link>
+
           {currentUser?.id ? (
-            <button
-              onClick={() => setUser(null)}
-              className="block hover:text-teal-600 bg-transparent border-none cursor-pointer w-full text-left"
-            >
-              Logout
-            </button>
+            <>
+              <Link href="/account" className="block hover:text-teal-600">
+                Account
+              </Link>
+              <button
+                onClick={() => setUser(null)}
+                className="block hover:text-teal-600 bg-transparent border-none cursor-pointer w-full text-left"
+              >
+                Logout
+              </button>
+            </>
           ) : (
             <>
               <Link href="/register" className="block hover:text-teal-600">
