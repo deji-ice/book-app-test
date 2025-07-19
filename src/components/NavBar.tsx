@@ -36,9 +36,9 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              {/* <Link href="/register" className="hover:text-teal-600">
+              <Link href="/register" className="hover:text-teal-600">
                 Register
-              </Link> */}
+              </Link>
               <Link href="/login" className="hover:text-teal-600">
                 Login
               </Link>
@@ -101,9 +101,9 @@ const NavBar = () => {
           </>
         ) : (
           <>
-            {/* <Link href="/register" className="block py-2 hover:text-teal-600">
+            <Link href="/register" className="block py-2 hover:text-teal-600">
               Register
-            </Link> */}
+            </Link>
             <Link href="/login" className="block py-2 hover:text-teal-600">
               Login
             </Link>
