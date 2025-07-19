@@ -83,5 +83,21 @@
     "following": [
       "913d285b-0c1f-486d-92e7-5bd40ac01cf7"
     ]
+  },
+  {
+    "id": "90a8dce3-d98a-46c3-8acc-e81078645336",
+    "email": "fr@yopmail.com",
+    "password": "test",
+    "userName": "ice",
+    "followers": [],
+    "following": []
+  },
+  {
+    "id": "113f987b-755d-4440-8804-3693150cdc01",
+    "email": "dimiso8577@hazhab.com",
+    "password": "test",
+    "userName": "test",
+    "followers": [],
+    "following": []
   }
 ]
