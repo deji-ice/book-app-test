@@ -1,4 +1,3 @@
-````markdown
 # Book Store
 
 A simple full-stack Book Store built with **Next.js 15**, **React Query**, **Zustand**, **Tailwind CSS**, and **pnpm**.  
@@ -6,7 +5,7 @@ Users can browse paginated books, view details, comment with ratings, follow oth
 
 ---
 
-**Important:**
+# Important:
 
 This app uses mock data stored in local JSON files for users and books. It is intended to be run in a local development environment only.
 
@@ -59,7 +58,6 @@ src/
 ```bash
 git clone https://github.com/deji-ice/book-store-test.git
 cd book-store
-```
 ````
 
 2. **Install dependencies**
@@ -91,7 +89,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ---
 
 ## API Endpoints
-
+```
 - `GET /api/books` — Get paginated books (`?page=1&limit=10`)
 - `GET /api/books/:id` — Get a single book by ID
 - `POST /api/books/:id/comments` — Add a comment to a book
@@ -105,7 +103,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - `POST /api/users/:id/follow` — Follow a user
 - `Delete /api/users/:id/follow` — Unfollow a user
 
----
+```
 
 ## Scripts
 
@@ -115,4 +113,3 @@ pnpm build   # Build production output
 pnpm start   # Run production server
 ```
 
----
