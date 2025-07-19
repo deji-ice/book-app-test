@@ -11,7 +11,10 @@ type FormData = {
 };
 
 const LoginForm = () => {
-  const [formData, setFormData] = useState<FormData>({ email: "", password: "" });
+  const [formData, setFormData] = useState<FormData>({
+    email: "",
+    password: "",
+  });
   const [error, setError] = useState("");
   const setUser = useUserStore((state) => state.setUser);
   const router = useRouter();
@@ -95,7 +98,9 @@ const LoginForm = () => {
       </div>
 
       <div>
-        <label className="block mb-1 font-semibold text-gray-700">Password</label>
+        <label className="block mb-1 font-semibold text-gray-700">
+          Password
+        </label>
         <input
           type="password"
           name="password"
@@ -116,12 +121,19 @@ const LoginForm = () => {
       >
         {mutation.isPending ? "Logging in..." : "Login"}
       </button>
-
-      <div className="text-center text-sm mt-3">
-        Don&apos;t have an account?{" "}
-        <a href="/register" className="text-teal-600 hover:underline font-medium">
-          Register
-        </a>
+      <div className="bg-teal-50 border border-teal-200 rounded p-3 text-sm text-gray-700 mt-2">
+        <span className="font-semibold text-teal-700">Demo Login:</span>
+        <ul className="list-disc ml-6 mt-1">
+          <li>
+            <span className="font-medium">Email:</span> alice@example.com
+          </li>
+          <li>
+            <span className="font-medium">Password:</span> password123
+          </li>
+        </ul>
+        <span className="block mt-2 text-xs text-gray-500">
+          Use these credentials to log in as a demo user.
+        </span>
       </div>
     </form>
   );

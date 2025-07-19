@@ -11,12 +11,7 @@ const Footer = () => {
         <Link href="/" className="text-blue-600 hover:underline text-sm">
           Home
         </Link>
-        <Link
-          href="/register"
-          className="text-blue-600 hover:underline text-sm"
-        >
-          Register
-        </Link>
+      
         <Link href="/login" className="text-blue-600 hover:underline text-sm">
           Login
         </Link>
