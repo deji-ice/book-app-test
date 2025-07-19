@@ -28,7 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${geist.variable} ${geistMono.variable} w-full mx-auto`}>
         <QueryProvider>
-          <NavBar />
+          <NavBar /> 
+          {/* Main content area with padding and max width */}
+          {/* Using ProtectedRoute to ensure only authenticated users can access the main content */}
+          {/* This will render the children components passed to this layout */}  
           <ProtectedRoute>
             <main className=" h-full min-h-[calc(100vh-300px)] max-w-[1300px] mt-20 lg:mt-10 mx-auto p-4">
               {children}
