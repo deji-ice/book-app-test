@@ -30,7 +30,7 @@ export default function RootLayout({
         <QueryProvider>
           <NavBar />
           <ProtectedRoute>
-            <main className=" h-full min-h-[calc(100vh-300px)] max-w-[1300px] mt-10 mx-auto p-4">
+            <main className=" h-full min-h-[calc(100vh-300px)] max-w-[1300px] mt-20 lg:mt-10 mx-auto p-4">
               {children}
             </main>
           </ProtectedRoute>
