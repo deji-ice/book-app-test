@@ -46,6 +46,7 @@ export async function POST(req: NextRequest) {
             { message: "User registered successfully", data: newUser },
             { status: 201 }
         );
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
         return NextResponse.json(
             { message: error?.message || "Unexpected error occurred" },
