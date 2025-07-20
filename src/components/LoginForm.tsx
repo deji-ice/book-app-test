@@ -121,7 +121,7 @@ const LoginForm = () => {
       >
         {mutation.isPending ? "Logging in..." : "Login"}
       </button>
-      <div className="bg-teal-50 border border-teal-200 rounded p-3 text-sm text-gray-700 mt-2">
+      {/* <div className="bg-teal-50 border border-teal-200 rounded p-3 text-sm text-gray-700 mt-2">
         <span className="font-semibold text-teal-700">Demo Login:</span>
         <ul className="list-disc ml-6 mt-1">
           <li>
@@ -134,7 +134,7 @@ const LoginForm = () => {
         <span className="block mt-2 text-xs text-gray-500">
           Use these credentials to log in as a demo user.
         </span>
-      </div>
+      </div> */}
     </form>
   );
 };
